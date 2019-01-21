@@ -16,7 +16,7 @@
         android:layout_height="36dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="提示信息"
+        android:text="获取球队："
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -27,40 +27,43 @@
         android:id="@+id/swi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="是否打开取图功能"
-        android:paddingRight="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv"
+        android:text="开启功能"
+        app:layout_goneMarginLeft="10dp"
         app:layout_constraintTop_toBottomOf="@id/tv"/>
 
 
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可选球队：rockets/thunder/celtics/warriors"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv"
+        app:layout_constraintTop_toBottomOf="@id/swi" />
 
     <EditText
         android:id="@+id/et"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/swi"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteX="16dp"
         android:layout_margin="10dp"
-        android:hint="rockets/thunder/celtics/warriors"/>
+        android:layout_marginTop="10dp"
+        android:hint="请输入可选球队名"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="请输入队名:"
-        android:paddingRight="10dp"
-        android:textSize="16sp"
-        app:layout_constraintRight_toLeftOf="@+id/et"
-        app:layout_constraintBottom_toBottomOf="@+id/et"
-        app:layout_constraintTop_toTopOf="@+id/et"
-        />
 
     <ImageView
         android:id="@+id/iv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et"/>
 
 
@@ -73,6 +76,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="展示输入球队的队徽"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

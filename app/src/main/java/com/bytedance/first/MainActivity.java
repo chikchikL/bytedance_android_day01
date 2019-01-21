@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void obtainImg() {
         //如果关闭了取图功能，不可获取图片
         if(!swi.isChecked()){
-            Toast.makeText(this, "请打开取图功能再试！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "请打开功能再试！", Toast.LENGTH_SHORT).show();
             return;
         }
 
 
         String input = et.getText().toString().trim();
         Integer resId = teams.get(input);
-        String content = (resId == null?"输入有误！请重新输入！":input);
+        String content = (resId == null?"输入有误！请重新输入！":"获取球队:\t"+input);
         et.setText("");
         Log.i(TAG,content);
         Toast.makeText(this,content,Toast.LENGTH_SHORT).show();
